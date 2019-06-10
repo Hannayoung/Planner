@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pay.planner.mapper.MemberMapper">
+	<select id="selectbyemail" parameterType="String" resultType="member">
+		SELECT * FROM MEMBER WHERE EMAIL = #{email}
+	</select>
+	
+	<select id="select" parameterType="Integer" resultType="member">
+		SELECT * FROM MEMBER WHERE MEMBER_ID = #{member_id}
+	</select>
+	
+	<select id="selectAll" resultType="member">
+		SELECT * FROM MEMBER ORDER BY MEMBER_ID
+	</select>
+	
+	<insert id="insert" parameterType="member">
+		INSERT INTO MEMBER
+		VALUES (SEQ_MEMBER.NEXTVAL, #{email},#{pw},#{name},#{address},#{phone},#{birth},0, 0, #{member_account})       
+	</insert>
+	
+	<update id="update" parameterType="member">
+		UPDATE MEMBER SET PW=#{pw}, PHONE=#{phone}, ADDRESS=#{address}, SCORE=#{score}, LIKES=#{likes}  WHERE MEMBER_ID = #{member_id}
+	</update>
+	
+	<update id="updateScore" parameterType="member">
+		UPDATE MEMBER SET SCORE=#{score}  WHERE MEMBER_ID = #{member_id}
+	</update>
+	
+	<update id="updateLikes" parameterType="member">
+		UPDATE MEMBER SET LIKES=#{likes}  WHERE MEMBER_ID = #{member_id}
+	</update>
+	
+	<select id="selectAdmin" parameterType="admin" resultType="String">
+		SELECT * FROM ADMIN_DB WHERE ADMIN_CODE='${admin_code}'
+	</select>
+	
+</mapper>
