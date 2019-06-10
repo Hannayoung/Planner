@@ -1,115 +1,55 @@
 package com.pay.planner.vo;
 
 public class MemberVO {
-	private int member_id;
-	private String email;
-	private String pw;
-	private String name;
-	private String address;
-	private String phone;
-	private String birth;
-	private int score;
-	private int likes;
-	private String member_account;
-	
+	private int m_id;
+	private String m_pw;
+	private String m_name;
+	private int m_point;
+
 	public MemberVO() {
 		super();
 	}
 
-	public MemberVO(int member_id, String email, String pw, String name, String address, String phone, String birth, int score,
-			int likes, String member_account) {
+	public MemberVO(int m_id, String m_pw, String m_name, int m_point) {
 		super();
-		this.member_id = member_id;
-		this.email = email;
-		this.pw = pw;
-		this.name = name;
-		this.address = address;
-		this.phone = phone;
-		this.birth = birth;
-		this.score = score;
-		this.likes = likes;
-		this.member_account = member_account;
+		this.m_id = m_id;
+		this.m_pw = m_pw;
+		this.m_name = m_name;
+		this.m_point = m_point;
 	}
 
-	public int getMember_id() {
-		return member_id;
+	public int getM_id() {
+		return m_id;
 	}
 
-	public void setMember_id(int member_id) {
-		this.member_id = member_id;
+	public void setM_id(int m_id) {
+		this.m_id = m_id;
 	}
 
-	public String getPw() {
-		return pw;
+	public String getM_pw() {
+		return m_pw;
 	}
 
-	public void setPw(String pw) {
-		this.pw = pw;
+	public void setM_pw(String m_pw) {
+		this.m_pw = m_pw;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getM_name() {
+		return m_name;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setM_name(String m_name) {
+		this.m_name = m_name;
 	}
 
-	public String getName() {
-		return name;
+	public int getM_point() {
+		return m_point;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setM_point(int m_point) {
+		this.m_point = m_point;
 	}
 
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public String getPhone() {
-		return phone;
-	}
-
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-
-	public String getBirth() {
-		return birth;
-	}
-
-	public void setBirth(String birth) {
-			this.birth = birth;
-	}
-
-	public int getScore() {
-		return score;
-	}
-
-	public void setScore(int score) {
-		this.score = score;
-	}
-
-	public int getLikes() {
-		return likes;
-	}
-
-	public void setLikes(int likes) {
-		this.likes = likes;
-	}
-
-	public String getMember_account() {
-		return member_account;
-	}
-
-	public void setMember_account(String member_account) {
-		this.member_account = member_account;
-	}
 //
 //	//pw 추가 되어야 함!  추가 부탁드려요~~~
 //	@Override
@@ -178,14 +118,10 @@ public class MemberVO {
 
 	@Override
 	public String toString() {
-		return "MemberVO [member_id=" + member_id + ", email=" + email + ", pw=" + pw + ", name=" + name + ", address="
-				+ address + ", phone=" + phone + ", birth=" + birth + ", score=" + score + ", likes=" + likes
-				+ ", member_account=" + member_account + ", getMember_id()=" + getMember_id() + ", getPw()=" + getPw()
-				+ ", getEmail()=" + getEmail() + ", getName()=" + getName() + ", getAddress()=" + getAddress()
-				+ ", getPhone()=" + getPhone() + ", getBirth()=" + getBirth() + ", getScore()=" + getScore()
-				+ ", getLikes()=" + getLikes() + ", getMember_account()=" + getMember_account() + ", hashCode()="
-				+ hashCode() + ", getClass()=" + getClass() + ", toString()=" + super.toString() + "]";
+		return "MemberVO [m_id=" + m_id + ", m_pw=" + m_pw + ", m_name=" + m_name + ", m_point=" + m_point
+				+ ", getM_id()=" + getM_id() + ", getM_pw()=" + getM_pw() + ", getM_name()=" + getM_name()
+				+ ", getM_point()=" + getM_point() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+				+ ", toString()=" + super.toString() + "]";
 	}
 
-	
 }
